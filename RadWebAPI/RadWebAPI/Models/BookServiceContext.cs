@@ -17,7 +17,13 @@ namespace RadWebAPI.Models
     
         public BookServiceContext() : base("name=BookServiceContext")
         {
+            var books = db.Books.ToList();  // Does not load authors
+            var author = books[0].Author;   // Loads the author for books[0]
+
+            Console.WriteLine("Boom");
         }
+
+
 
         public System.Data.Entity.DbSet<RadWebAPI.Models.Author> Authors { get; set; }
 
