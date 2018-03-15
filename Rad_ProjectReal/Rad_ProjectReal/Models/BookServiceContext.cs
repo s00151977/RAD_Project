@@ -17,7 +17,7 @@ namespace Rad_ProjectReal.Models
     
         public BookServiceContext() : base("name=BookServiceContext")
         {
-            this.Database.Log = s => System.Diagnostics.Debug.WriteLine(s);
+            this.Database.Log = s => System.Diagnostics.Debug.WriteLine(s);  //
         }
 
         public System.Data.Entity.DbSet<Rad_ProjectReal.Models.Author> Authors { get; set; }
